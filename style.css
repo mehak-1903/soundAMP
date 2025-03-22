@@ -49,19 +49,17 @@ header{
 .navbar ul li a i{
 	color: #79b9f5;
 }
-.navbar{
+.drop-down{
 	position: relative;
   	display: inline-block;
 }
-#dropdown-btn1{
+#dropdown-btn1, #dropdown-btn2{
 	color: white;
 }
-#dropdown-btn2{
+.drop-down a{
 	color: white;
-}
-.drop-down{
-	color: white;
-	background: black;
+	padding: 16px;
+    font-weight: 600;
 	display: block;
 	text-decoration: none;
 	list-style: none;
@@ -70,24 +68,37 @@ header{
 	display: none;
   	position: absolute;
   	background-color: #f1f1f1;
-  	min-width: 160px;
+  	min-width: 140px;
   	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  	z-index: 1;
+  	z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-radius: 5px;
 }
-.dropdown-content a {
+.dropdown-content list{
+    margin: 0;
+}
+.dropdown-content li a {
   	color: black;
-  	padding: 12px 16px;
+  	padding: 12px;
   	text-decoration: none;
-  	display: block;
+  	display: none;
 }
 .dropdown-content a:hover {
 	background-color: #ddd;
 }
-.drop-down:hover .dropdown-content {
+.drop-down:hover > .dropdown-content {
 	display: block;
 }
-.drop-down:hover .dropbtn {
-	background-color: #3e8e41;
+.drop-down:hover > .dropdown-content li a{
+	display: block;
+}
+.drop-down i:hover{
+    transform: rotate(180deg);
+    transform: transform 0.3s ease;
 }
 button{
     background-color: #77b9f8;
