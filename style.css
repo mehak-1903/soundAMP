@@ -78,7 +78,7 @@ header{
     list-style: none;
     border-radius: 5px;
 }
-.dropdown-content list{
+.dropdown-content li{
     margin: 0;
 }
 .dropdown-content li a {
